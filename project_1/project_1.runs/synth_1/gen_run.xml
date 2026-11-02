@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7k410tfbg676-1" LaunchTime="1793518507" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top.dcp">
+  <File Type="PA-TCL" Name="top.tcl"/>
+  <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/core_system/dds_sincos_lut.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../core_system/dds_sincos_lut.mem"/>
+        <Attr Name="ImportTime" Val="1793013108"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/archive_project_summary.txt"/>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/ad9517_config.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ad9517_config.sv"/>
+        <Attr Name="ImportTime" Val="1793004505"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/dac/backend.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../dac/backend.sv"/>
+        <Attr Name="ImportTime" Val="1793025040"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/clk_synthesizer_top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../clk_synthesizer_top.sv"/>
+        <Attr Name="ImportTime" Val="1793007242"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/core_system/core_system_top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../core_system/core_system_top.sv"/>
+        <Attr Name="ImportTime" Val="1793013173"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/dac/dac5681_init.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../dac/dac5681_init.sv"/>
+        <Attr Name="ImportTime" Val="1793016315"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/dac/dac_spi_manager.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../dac/dac_spi_manager.sv"/>
+        <Attr Name="ImportTime" Val="1793015569"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/core_system/dds_8lane_top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../core_system/dds_8lane_top.sv"/>
+        <Attr Name="ImportTime" Val="1793013107"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/dac/output_8to1_ddr.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../dac/output_8to1_ddr.sv"/>
+        <Attr Name="ImportTime" Val="1793020636"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/por_reset.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../por_reset.sv"/>
+        <Attr Name="ImportTime" Val="1792982374"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/ref_clk_gen.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ref_clk_gen.sv"/>
+        <Attr Name="ImportTime" Val="1792990918"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/dac/spi_dac5681z.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../dac/spi_dac5681z.sv"/>
+        <Attr Name="ImportTime" Val="1793016278"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/spi_master.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../spi_master.sv"/>
+        <Attr Name="ImportTime" Val="1793004541"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/core_system/uart_byte_rx.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../core_system/uart_byte_rx.sv"/>
+        <Attr Name="ImportTime" Val="1793013107"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/core_system/uart_byte_tx.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../core_system/uart_byte_tx.sv"/>
+        <Attr Name="ImportTime" Val="1793013108"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/core_system/uart_reg_bridge.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../core_system/uart_reg_bridge.sv"/>
+        <Attr Name="ImportTime" Val="1793013108"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/led_test/top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../top.sv"/>
+        <Attr Name="ImportTime" Val="1793025953"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/led_test/ieesp-0001-a.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ieesp-0001-a.xdc"/>
+        <Attr Name="ImportTime" Val="1793024977"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/top.dcp">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../project_1/project_1.srcs/utils_1/imports/synth_1/top.dcp"/>
+        <Attr Name="ImportTime" Val="1793025969"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="vio_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
+</GenRun>

@@ -1,0 +1,37 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Tue Oct 27 14:14:04 2026
+| Host         : LAPTOP-NE04E4L2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k410tfbg676-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'clk_wiz_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of clk_wiz_0 (xilinx.com:ip:clk_wiz:6.0) from (Rev. 11) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Tue Oct 27 14:13:54 2026
+| Host         : LAPTOP-NE04E4L2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k410tfbg676-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'clk_wiz_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of clk_wiz_1 (xilinx.com:ip:clk_wiz:6.0) from (Rev. 11) to (Rev. 17)
+
