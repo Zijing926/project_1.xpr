@@ -7,7 +7,7 @@
  *
  *   Uses three instances of output_8to1_ddr (wrapping OSERDESE2):
  *     - 16-lane data channel  : 16-bit parallel-to-serial DDR output
- *     - 1-lane data clock     : 250MHz LVDS clock (DDR 101010 pattern)
+ *     - 1-lane data clock     : 500MHz LVDS clock (DDR 101010 pattern)
  *     - 1-lane frame sync     : Continuous high LVDS sync indicator
  *
  *   Data rate per lane : 125MHz × 8 = 1000 Mbps (DDR @ 500MHz)
@@ -20,7 +20,7 @@
  *
  *   使用三个 output_8to1_ddr 例化（内部封装 OSERDESE2）：
  *     - 16 路数据通道 ：16 位并串转换 DDR 输出
- *     - 1 路数据时钟  ：250MHz LVDS 随路时钟（DDR 交替 1010 模式）
+ *     - 1 路数据时钟  ：500MHz LVDS 随路时钟（DDR 交替 1010 模式）
  *     - 1 路帧同步    ：持续高电平 LVDS 同步指示
  *
  *   每 lane 数据率 ：125MHz × 8 = 1000 Mbps（DDR @ 500MHz）
@@ -37,7 +37,7 @@
  *   rst_125m      - Active-high reset in 125MHz domain
  *   din[7:0][15:0]- 8-lane × 16-bit parallel input data from DDS
  *   HDAC_D_P/N    - 16 pairs LVDS DDR data output to DAC
- *   HDAC_DCLKP/N  - LVDS data clock output (250MHz DDR)
+ *   HDAC_DCLKP/N  - LVDS data clock output (500MHz DDR)
  *   HDAC_SYNCP/N  - LVDS frame sync output (high = data valid)
  *
  * Interface Timing (DAC5681 Source-Synchronous DDR):
@@ -50,7 +50,7 @@
  *
  * Note:
  *   - BIT_WIDTH=16 instantiates 16 parallel OSERDESE2 primitives
- *   - DCLK pattern {1,0,1,0,1,0,1,0} produces 250MHz square wave at DDR
+ *   - DCLK pattern {1,0,1,0,1,0,1,0} produces 500MHz square wave at DDR
  *   - SYNC pattern {1,1,1,1,1,1,1,1} produces continuous high (data valid)
  *   - Ensure HDAC_D_*, HDAC_DCLK_*, HDAC_SYNC_* pins are in same LVDS bank
  *   - Match IOSTANDARD (typically LVDS_25) in XDC constraints

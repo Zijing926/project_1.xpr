@@ -234,7 +234,12 @@ class RegisterWidget(QFrame):
 
             self.write_requested.emit(self.config.index, raw)
             self.line_edit.clearFocus()
-            self.line_edit.setStyleSheet("background-color: #e6ffed;")
+            if self.config.index in (1, 2):
+                self.line_edit.setStyleSheet(
+                    "background-color: #2e7d32; color: #ffffff;"
+                )
+            else:
+                self.line_edit.setStyleSheet("background-color: #e6ffed;")
         except ValueError:
             self.line_edit.setStyleSheet("background-color: #ffeef0;")
 

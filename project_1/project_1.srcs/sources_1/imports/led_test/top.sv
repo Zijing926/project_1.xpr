@@ -82,7 +82,7 @@ module top
       .PLL_STATUS(PLL_STATUS),
       .PLL_SYNCB(PLL_SYNCB),
       // For debug
-      .auto_cfg_done_out(clk_synthesizer_top_cfg_done)
+      .auto_cfg_done(clk_synthesizer_top_cfg_done)
       );
 
    // ========== AD9517 OUT6 differential input ==========
@@ -101,7 +101,7 @@ module top
       .clk_out3(sys_clk_125m)  // 125 MHz
       );
 
-   logic sys_rst_125m;
+   logic sys_rst_125m;  //active high
    logic [3:0] sys_rst_125m_sr;
 
    always_ff @(posedge sys_clk_125m or negedge sys_clk_locked) begin
@@ -148,7 +148,7 @@ module top
 
     dac_spi_manager dac_spi_manager_inst (
         .clk           (vcxo_clk_125m),
-        .rst           (por_rst),
+        .rst           (~clk_synthesizer_top_cfg_done),
         .miso          (HDAC_SDO),
         .user_data_tx  (data_tx),
         .user_start    (vio_start),
@@ -156,7 +156,6 @@ module top
         .sclk          (HDAC_SCLK),
         .csb           (HDAC_SDENB),
         .mosi          (HDAC_SDIO),
-        .done          (dac_spi_manager_done),
         .resetb        (HDAC_RESETB)
     );
 
@@ -181,10 +180,6 @@ module top
    logic [31:0] test_data;
    assign test_data = data_to_dac[0];
    assign led = test_data[15:0];
-   ila_0 u_ila_0 (
-       .clk(sys_clk_125m),
-       .probe0(data_to_dac[7]),
-      .probe1(data_to_dac[6])
-   );
+   
 endmodule
 `default_nettype wire

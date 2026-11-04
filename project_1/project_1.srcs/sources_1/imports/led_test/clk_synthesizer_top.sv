@@ -19,7 +19,7 @@ module clk_synthesizer_top (
     input logic  PLL_STATUS,
     output logic PLL_SYNCB,			    
     // For debug
-    output logic auto_cfg_done_out 
+    output logic auto_cfg_done 
 );
 
 
@@ -50,7 +50,6 @@ module clk_synthesizer_top (
     // ---------- 自动配置模块信号 ----------
     logic        auto_spi_start;
     logic [23:0] auto_spi_data_tx;
-    logic        auto_cfg_done;
 
     always_ff @(posedge sys_clk_125m) begin
         if (rst) begin
@@ -95,20 +94,6 @@ module clk_synthesizer_top (
         .cfg_done   (auto_cfg_done)
     );
 
-    // ========== VIO ==========
-   /*
-    vio_0 u_vio (
-        .clk        (sys_clk_125m),
-        .probe_out0 (manual_data_tx),   // [23:0] 手模式数据
-        .probe_out1 (manual_start),     // [0]    手模式 Start
-        .probe_out2 (vio_reset),        // [0]    手复位
-        .probe_in0  (spi_data_rx),      // [7:0]  data read from AD9517
-        .probe_in1  (PLL_LD),           // [0]    Lock Detect
-        .probe_in2  (PLL_STATUS),       // [0]    PLL_STATUS
-        .probe_in3  (spi_sdio_oe),      // [0]    SDIO 方向
-        .probe_in4  (auto_cfg_done)     // [0]    自配置完成
-    );
-*/
    
     // ========== physical pin connection ==========
     assign PLL_SDIO   = spi_sdio_oe ? spi_mosi : 1'bz;
@@ -118,6 +103,4 @@ module clk_synthesizer_top (
     assign PLL_PDB     = 1'b1;
     assign PLL_SYNCB   = 1'b1; 
 
-    // ========== for debug ========
-    assign auto_cfg_done_out = auto_cfg_done;
 endmodule

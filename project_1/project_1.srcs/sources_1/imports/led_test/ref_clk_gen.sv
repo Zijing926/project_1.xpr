@@ -39,7 +39,23 @@ IBUFDS #(
 
     // LVDS output
 	logic ref_clk;
-
+    // ========== 复位同步到 clk_ref 域 ==========
+    logic rst_clk_ref_sync;
+    
+    // 使用 Xilinx 推荐的同步器结构 (ASYNC_REG)
+    (* ASYNC_REG = "TRUE" *) logic rst_sync_ff1;
+    (* ASYNC_REG = "TRUE" *) logic rst_sync_ff2;
+    
+    always_ff @(posedge clk_ref or posedge rst) begin
+        if (rst) begin
+            rst_sync_ff1 <= 1'b1;
+            rst_sync_ff2 <= 1'b1;
+        end else begin
+            rst_sync_ff1 <= 1'b0;
+            rst_sync_ff2 <= rst_sync_ff1;
+        end
+    end
+    assign rst_clk_ref_sync = rst_sync_ff2;
     ODDR2 #(
         .DDR_ALIGNMENT("NONE"),
         .INIT(1'b0),
@@ -51,7 +67,7 @@ IBUFDS #(
         .CE (1'b1),
         .D0 (1'b1),
         .D1 (1'b0),
-        .R  (rst),
+        .R  (rst_clk_ref_sync),
         .S  (1'b0)
     );
 
